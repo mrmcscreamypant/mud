@@ -1,0 +1,11 @@
+{
+    "name": "tesseract",
+    "version": "0.0.1",
+    "description": "A react library for making 3D websites",
+    "main": "src/index.tsx",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "packageManager": "pnpm@10.28.2"
+}
