@@ -62,7 +62,7 @@ export function Modal({ title, blocking, children }: { title: string, blocking?:
     });
 
     return <group ref={groupRef}>
-        <DREI.Html transform occlude className="panel modal" scale={1 / 4}>
+        <DREI.Html transform occlude className="panel modal" scale={1 / 6}>
             <h1>{title}</h1>
             {children}
         </DREI.Html>
