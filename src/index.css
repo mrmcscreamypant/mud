@@ -4,7 +4,20 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
+    background-color: grey;
+}
+
+.panel {
+    width: calc(40px*4*var(--panel-width));
+    height: calc(40px*4*var(--panel-height));
+    padding: 0px;
+    overflow-y: scroll;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .modal {
+    --panel-width: 6;
+    --panel-height: 2;
 }
