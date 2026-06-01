@@ -28,7 +28,12 @@ export function Wrapper({ children }: React.PropsWithChildren): React.JSX.Elemen
 export function Page({ children, position, focused }: { position: THREE.Vector3, focused?: boolean } & React.PropsWithChildren): React.JSX.Element {
     const groupRef = React.useRef<THREE.Group>(null);
 
-    Fiber.useFrame((state, delta) => { if (groupRef.current && focused) lerpCameraLook(state, groupRef.current.position, delta); });
+    Fiber.useFrame((state, delta) => {
+        if (groupRef.current && focused) {
+            lerpCameraLook(state, groupRef.current.position, delta);
+            groupRef.current.lookAt(state.camera.position);
+        }
+    });
 
     return <group position={position} ref={groupRef}>
         <DREI.Html transform occlude>
